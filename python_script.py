@@ -8,6 +8,7 @@ from classifier import BreastCancerCassifier
 app = Flask(__name__)
 api = Api(app)
 CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 api.add_resource(BreastCancerCassifier, '/classifier')
 
